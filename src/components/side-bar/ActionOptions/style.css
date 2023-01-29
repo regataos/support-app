@@ -1,0 +1,19 @@
+.action-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.action-option img {
+    margin-left: 3px;
+    height: 30px;
+    padding-right: 5px;
+}
