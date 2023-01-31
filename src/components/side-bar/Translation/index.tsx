@@ -5,7 +5,7 @@ export const Translation = (textTranslated: string) => {
             "pt-br": "Voltar",
             "en": "Go Back",
         },
-        "menu": {
+        "hideMenu": {
             "pt-br": "Apenas ícones",
             "en": "Icons only",
         },

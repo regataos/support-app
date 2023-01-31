@@ -4,6 +4,7 @@
 	align-items: center;
 	cursor: pointer;
 	width: 230px;
+	overflow: hidden;
 	padding-top: 16px;
 	padding-bottom: 16px;
 	transition: all 0.3s ease-in-out;
@@ -34,9 +35,16 @@
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	line-height: 1.4;
-    overflow: hidden;
     margin-top: 0px;
     margin-left: 13px;
     margin-bottom: 0px;
 	padding-left: 0px;
+}
+
+.hide-text {
+	visibility: hidden;
+}
+
+.reduce-sidebar {
+	width: 56px !important;
 }
