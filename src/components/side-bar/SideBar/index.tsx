@@ -4,20 +4,20 @@ import { ActionOptions } from "../ActionOptions";
 /* Check if the sidebar should display icons and text
 or just icons when launching the app */
 const sideBar: Element | null = document.querySelector("#side-bar");
-let sidebarStatus: string | null | void = localStorage.getItem("sidebarStatus");
+let sidebarHide: string | null | void = sessionStorage.getItem("sidebarHide");
 let hideText: string = "";
 
-if (!sidebarStatus) {
-    localStorage.setItem("sidebarStatus", "true");
-    sidebarStatus = localStorage.setItem("sidebarStatus", "true");
+if (!sidebarHide) {
+    sessionStorage.setItem("sidebarHide", "false");
+    sidebarHide = sessionStorage.getItem("sidebarHide");
 
-} else if (sidebarStatus === "true") {
-    hideText = sidebarStatus;
+} else if (sidebarHide === "true") {
+    hideText = sidebarHide;
 }
 
 export const SideBar = () => {
     return (
-        <div id="side-bar" className={hideText ? "" : "reduce-sidebar"}>
+        <div id="side-bar" className={hideText ? "reduce-sidebar" : ""}>
             <ActionOptions />
             <div id="side-bar-menu" style={{ overflow: "hidden" }}>
                 <MenuOptions menuOption="solutions" />

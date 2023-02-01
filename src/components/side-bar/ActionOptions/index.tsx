@@ -4,12 +4,12 @@ import { ActionOptionIcon } from "./ActionOptionIcon";
 // Show only sidebar icons, hiding text
 const hideMenu = () => {
     // Get sidebar status
-    let sidebarStatus: string | null = localStorage.getItem("sidebarStatus");
-
     const sideBar: Element | null = document.querySelector("#side-bar");
     const optionDesc: NodeListOf<Element> = document.querySelectorAll(".option-description");
 
-    if (sidebarStatus === "true") {
+    let sidebarHide: string | null = sessionStorage.getItem("sidebarHide");
+
+    if (sidebarHide === "false") {
         for (let i = 0; i < optionDesc.length; i++) {
             optionDesc[i].classList.add('hide-text');
         }
@@ -18,9 +18,9 @@ const hideMenu = () => {
             sideBar.classList.add('reduce-sidebar');
         }
 
-        localStorage.setItem("sidebarStatus", "false");
+        sessionStorage.setItem("sidebarHide", "true");
 
-    } else if (sidebarStatus === "false") {
+    } else if (sidebarHide === "true") {
         if (sideBar) {
             sideBar.classList.remove('reduce-sidebar');
         }
@@ -31,7 +31,7 @@ const hideMenu = () => {
             }, 200);
         }
 
-        localStorage.setItem("sidebarStatus", "true");
+        sessionStorage.setItem("sidebarHide", "false");
     }
 };
 
