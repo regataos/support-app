@@ -1,14 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
 	margin: 0;
+    user-select: none;
 }
 
 #side-bar {
     display: block;
-    position: fixed;
     background-color: #e5e5e5;
     text-align: left;
     top: 0px;
-    left: 0px;
+    float: left;
     width: 230px;
     height: 100%;
     padding: 0 0 14px 0;
@@ -20,11 +24,14 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-#block-home {
+#main-container {
 	position: fixed;
     float: left;
-    margin-left: 230px;
     width: 100%;
     height: 100%;
     transition: all 0.3s ease-in-out;
+}
+
+.showElement {
+    display: block !important;
 }

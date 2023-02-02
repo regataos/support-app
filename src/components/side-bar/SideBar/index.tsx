@@ -3,7 +3,6 @@ import { ActionOptions } from "../ActionOptions";
 
 /* Check if the sidebar should display icons and text
 or just icons when launching the app */
-const sideBar: Element | null = document.querySelector("#side-bar");
 let sidebarHide: string | null | void = sessionStorage.getItem("sidebarHide");
 let hideText: string = "";
 
@@ -13,7 +12,7 @@ if (!sidebarHide) {
 
 } else if (sidebarHide === "true") {
     hideText = sidebarHide;
-}
+};
 
 export const SideBar = () => {
     return (
@@ -26,4 +25,4 @@ export const SideBar = () => {
             </div>
         </div >
     );
-}
+};

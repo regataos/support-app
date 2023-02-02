@@ -1,0 +1,29 @@
+#home-container {
+    display: none;
+    float: left;
+    width: auto;
+    height: 100%;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0px;
+    padding-left: 30px;
+    white-space: pre-line;
+}
+
+.desc-forum {
+    float: left;
+}

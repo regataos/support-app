@@ -14,16 +14,14 @@ const hideMenu = () => {
             optionDesc[i].classList.add('hide-text');
         }
 
-        if (sideBar) {
+        if (sideBar)
             sideBar.classList.add('reduce-sidebar');
-        }
 
         sessionStorage.setItem("sidebarHide", "true");
 
     } else if (sidebarHide === "true") {
-        if (sideBar) {
+        if (sideBar)
             sideBar.classList.remove('reduce-sidebar');
-        }
 
         for (let i = 0; i < optionDesc.length; i++) {
             setTimeout(function () {
@@ -32,11 +30,11 @@ const hideMenu = () => {
         }
 
         sessionStorage.setItem("sidebarHide", "false");
-    }
+    };
 };
 
 const returnPage = () => {
-    console.log("Return Page")
+    console.log("Return Page");
 };
 
 export const ActionOptions = () => {

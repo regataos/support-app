@@ -1,12 +1,14 @@
 import './App.css';
 import { SideBar } from "./components/side-bar/SideBar";
+import { HomePage } from "./components/home/HomePage"
+import { WebView } from "./components/WebView"
 
 const App = () => {
 	return (
-		<div id="main-block">
+		<div id="main-container">
 			<SideBar />
-			<div id="block-home">
-			</div>
+			<HomePage />
+			<WebView />
 		</div>
 	);
 };

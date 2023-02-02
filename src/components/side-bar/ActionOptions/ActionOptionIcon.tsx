@@ -1,6 +1,6 @@
 import "./style.css"
 import { Translation } from "../Translation";
-import Image from "./Image";
+import Images from "./Images";
 
 interface Props {
     actionOption: string
@@ -9,7 +9,7 @@ interface Props {
 export const ActionOptionIcon = (props: Props) => {
     return (
         <img
-            src={Image[props.actionOption as keyof typeof Image]}
+            src={Images[props.actionOption as keyof typeof Images]}
             alt={Translation(props.actionOption)}
             title={Translation(props.actionOption)}
         />

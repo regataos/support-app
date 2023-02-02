@@ -24,9 +24,8 @@ export const Translation = (textTranslated: string) => {
     };
 
     let navigatorLang = navigator.language.toLowerCase();
-
-    let getTranslatedOption: any = lang[textTranslated as keyof typeof lang]
-    let getTranslatedText = getTranslatedOption[navigatorLang]
+    let getTranslatedOption: any = lang[textTranslated as keyof typeof lang];
+    let getTranslatedText = getTranslatedOption[navigatorLang];
 
     return getTranslatedText ? getTranslatedText : getTranslatedOption["en"];
 };
