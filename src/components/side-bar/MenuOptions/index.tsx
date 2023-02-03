@@ -4,30 +4,50 @@ import { Translation } from "../Translation";
 
 const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     const homePage: Element | null = document.querySelector("#home-container");
-    const webView: Element | null = document.querySelector("#webview-container");
+    const webviewContainer: Element | null = document.querySelector("#webview-container");
+    const webview: Element | null = document.querySelector("#webview");
 
     let goLink: string = event.currentTarget.id;
 
     if (goLink === "solutions") {
-        if (homePage)
-            homePage.classList.add('showElement');
+        if (webview)
+            webview.remove();
 
-        if (webView)
-            webView.classList.remove('showElement');
+        if (homePage)
+            homePage.classList.add("showElement");
+
+        if (webviewContainer)
+            webviewContainer.classList.remove("showElement");
 
     } else {
-        const webViewLinks = {
-            "support": "link-aqui",
-            "forum": "link-aqui"
+        if (webview)
+            webview.remove();
+
+        const webviewContainerLinks = {
+            "support": "https://suporte.regataos.com.br/",
+            "forum": "https://regataos.forumeiros.com/"
         };
 
+        const newElement = document.createElement("webview");
+        newElement.id = "webview"
+
+        let sidebarHide: string | null = sessionStorage.getItem("sidebarHide");
+        if (sidebarHide === "true") {
+            newElement.classList.add('reduce-webview');
+        }
+
+        newElement.setAttribute("src", webviewContainerLinks[goLink as keyof typeof webviewContainerLinks]);
+        newElement.setAttribute("autosize", "on");
+        newElement.setAttribute("partition", "persist:webview");
+
+        if (webviewContainer)
+            webviewContainer.appendChild(newElement);
+
         if (homePage)
-            homePage.classList.remove('showElement');
+            homePage.classList.remove("showElement");
 
-        if (webView)
-            webView.classList.add('showElement');
-
-        console.log(webViewLinks[goLink as keyof typeof webViewLinks]);
+        if (webviewContainer)
+            webviewContainer.classList.add("showElement");
     };
 };
 

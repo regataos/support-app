@@ -6,6 +6,7 @@ const hideMenu = () => {
     // Get sidebar status
     const sideBar: Element | null = document.querySelector("#side-bar");
     const optionDesc: NodeListOf<Element> = document.querySelectorAll(".option-description");
+    const webview: Element | null = document.querySelector("#webview");
 
     let sidebarHide: string | null = sessionStorage.getItem("sidebarHide");
 
@@ -17,11 +18,17 @@ const hideMenu = () => {
         if (sideBar)
             sideBar.classList.add('reduce-sidebar');
 
+        if (webview)
+            webview.classList.add('reduce-webview');
+
         sessionStorage.setItem("sidebarHide", "true");
 
     } else if (sidebarHide === "true") {
         if (sideBar)
             sideBar.classList.remove('reduce-sidebar');
+
+        if (webview)
+            webview.classList.remove('reduce-webview');
 
         for (let i = 0; i < optionDesc.length; i++) {
             setTimeout(function () {

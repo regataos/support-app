@@ -1,0 +1,15 @@
+#webview-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#webview {
+    position: fixed;
+    width: calc(100% - 230px);
+    height: 100%;
+}
+
+.reduce-webview {
+    width: calc(100% - 56px) !important;
+}
