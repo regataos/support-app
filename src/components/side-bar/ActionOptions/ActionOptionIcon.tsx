@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.css";
 import { Translation } from "../Translation";
 import Images from "./Images";
 

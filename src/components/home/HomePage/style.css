@@ -1,8 +1,9 @@
 #home-container {
     display: none;
-    float: left;
-    width: auto;
+    width: calc(100% - 230px);
     height: 100%;
+    float: right;
+    transition: all 0.3s ease-in-out;
 }
 
 h1 {
@@ -26,4 +27,15 @@ h2 {
 
 .desc-forum {
     float: left;
+}
+
+#solution-options {
+    width: 95%;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
 }
